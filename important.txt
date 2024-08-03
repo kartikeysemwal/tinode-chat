@@ -1,0 +1,25 @@
+PS C:\Important Files\tinode\tinode-chat\server> go install -tags postgres github.com/tinode/chat/server@latest
+PS C:\Important Files\tinode\tinode-chat\server> go install -tags postgres github.com/tinode/chat/tinode-db@latest
+PS C:\Important Files\tinode\tinode-chat\server> go build -tags postgres .
+
+place the static Files
+
+PS C:\Important Files\tinode\tinode-chat\server> .\server.exe
+
+
+
+db
+
+C:\Important Files\tinode\tinode-chat>set PGDATA=C:\Program Files\PostgreSQL\15\data
+C:\Important Files\tinode\tinode-chat>pg_ctl start
+
+// import data
+C:\Important Files\tinode\tinode-chat>echo %gopath% 
+C:\Users\semwa\go
+
+C:\Important Files\tinode\tinode-chat>go install -tags postgres github.com/tinode/chat/tinode-db@latest
+
+might have to delete tinode db from psql before doing this
+
+C:\Important Files\tinode\tinode-chat\tinode-db>tinode-db -data=data.json
+
